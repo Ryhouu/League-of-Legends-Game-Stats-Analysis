@@ -1,0 +1,68 @@
+{
+    "br1": {
+        "name": "Brazil",
+        "countries": ["Brazil"],
+        "latitude": -9.697,
+        "longitude": -56.248
+    },
+    "eun1": {
+        "countries": ["Iceland", "Norway", "Finland", "Denmark", "Sweden", "Estonia", "Lithuana", "Latvia", "Belarus", "Poland", "Czech Republic", "Slovakia", "Ukraine", "Slovenia", "Hungary", "Moldova", "Romania", "Croatia", "Bosnia", "Serbia", "Bulgaria", "Montenegro", "Kosovo", "Macedonia", "Albania", "Greece"],
+        "latitude": 61.275,
+        "longitude": 15.399,
+        "name": "Europe Nordic & East"
+    },
+    "euw1": {
+        "countries": ["Ireland", "England", "Netherlands", "Germany", "Belgium", "Luxembourg", "France", "Switzerland", "Austria", "Italy", "Spain", "Portugal"],
+        "latitude": 45.008,
+        "longitude": 1.558,
+        "name": "Europe West"
+    },
+    "la1": {
+        "countries": ["Colombia", "Costa Rica", "Ecuador", "El Salvador", "Guatemala", "Honduras", "Mexico", "Nicaragua", "Panama", "Peru"],
+        "latitude": 14.157,
+        "longitude": -87.739,
+        "name": "Latin America North"
+    },
+    "la2": {
+        "name": "Latin America South",
+        "countries": ["Chile", "Argentina", "Uruguay", "Paraguay", "Bolivia"],
+        "latitude": -37.88,
+        "longitude": -66.48
+    },
+    "na1": {
+        "name": "North America",
+        "countries": ["USA", "Canada"],
+        "latitude": 48.858,
+        "longitude": -111.16
+    },
+    "oc1": {
+        "name": "Australia",
+        "countries": ["Australia"],
+        "latitude": -26.29,
+        "longitude": 134.235
+    },
+    "ru": {
+        "name": "Russia",
+        "countries": ["Russia", "Georgia", "Armenia", "Azerbaijan"],
+        "latitude": 63.49,
+        "longitude": 95.88
+    },
+    "tr1": {
+        "name": "Turkey",
+        "countries": ["Turkey"],
+        "latitude": 38.57,
+        "longitude": 35.545
+    },
+    "jp1": {
+        "name": "Japan",
+        "countries": ["Japan"],
+        "latitude": 36.645,
+        "longitude": 139.534
+    },
+    "kr": {
+        "name": "Korea",
+        "countries": ["Korea"],
+        "latitude": 36.397,
+        "longitude": 127.979
+    }
+}
