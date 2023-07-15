@@ -1,0 +1,292 @@
+.scatter {
+    opacity: .2;
+    fill:lightsteelblue
+}
+
+.bar {
+    opacity: .8;
+}
+
+.radial_bar {
+    opacity:.8
+}
+
+.radial_yAxis_circle {
+    stroke: grey;
+    stroke-width: 3px;
+    stroke-opacity: .25;
+}
+
+.radial_yAxis_text {
+    stroke: none;
+    stroke-width: 2px;
+    fill:grey;
+    font: 20px "Rajdhani";
+}
+
+.plot_title1 {
+    fill:cornflowerblue;
+    text-anchor: left;
+    font-family: "Play";
+    text-decoration: bold;
+}
+
+.plot_title2 {
+    fill:cornsilk;
+    text-anchor: left;
+    font: 36px "Play";
+    text-decoration: bold;
+}
+
+.plot_title3 {
+    text-anchor: left;
+    font-family: "Play";
+    text-decoration: bold 700;
+}
+
+.plot_title4 {
+    text-anchor: left;
+    font-family: "Play";
+    text-decoration: bold 700;
+}
+
+.plot_title5 {
+    fill:cornsilk;
+    text-anchor: middle;
+    font: 44px "Play";
+    text-decoration: bold 700;
+}
+
+.axis_title {
+    text-anchor: middle;
+    font: 16px "Rajdhani";
+    fill:floralwhite;
+}
+
+.plot_axis {
+    font: 16px "Rajdhani";
+    color:floralwhite;
+}
+
+.plot_label {
+    font: 22px "Rajdhani";
+    fill:floralwhite;
+}
+
+.legend {
+    height: 100;
+    width: 100
+}
+
+.map_mesh {
+    stroke:none;
+    stroke-width: 0.8px;
+}
+
+.map_bubble {
+    fill:cornsilk;
+    opacity: 0.75;
+    stroke:ivory;
+    stroke-width: 4px;
+}
+.bubble_label {
+    text-anchor: middle;
+    fill:black;
+    font:18px "Raleway";
+}
+.legend_label {
+    font: 10px sans-serif;
+    fill:cornsilk;
+    text-anchor: middle;
+}
+
+.legend_circle {
+    stroke:cornsilk;
+    stroke-width: 1.5px;
+    fill: none;
+}
+
+div:not(:first-child):not(:last-child) {
+    border-color: rgb(160, 160, 160);
+    float:top;
+    clear:none; 
+    
+}
+
+body {
+    position:relative;
+    display: grid;
+    background-color: rgba(37, 35, 35, 1);
+}
+
+.section_id_light {
+    position:absolute;
+    top:0;
+    left:0;
+    color:floralwhite;
+    fill:floralwhite;
+    opacity:.28;
+}
+.section_id_dark {
+    position:absolute;
+    top:0;
+    left:0;
+    color:floralwhite;
+    fill:darkgrey;
+    opacity:1;
+}
+
+.section_id_text_light {
+    position:absolute;
+    top:0;
+    left:0;
+    fill:darkblue;
+    opacity:.9;
+    font-family: "Anton";
+    font-size:28px;
+}
+.section_id_text_dark {
+    position:absolute;
+    top:0;
+    left:0;
+    fill:floralwhite;
+    opacity:.75;
+    font-family: "Anton";
+    font-size:28px;
+}
+
+#section0{
+    position: relative;
+}
+
+#section1 {
+    position:relative;
+}
+
+#section2{
+    position: relative;
+}
+#section3{
+    position: relative;
+}
+#section4{
+    position: relative;
+}
+#section5{
+    position: relative;
+}
+
+h1 {
+    position:absolute;
+    top:20px;
+    left: 30px;
+    text-anchor:middle;
+    font-size: 66px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(245, 241, 237, 1)
+}
+
+h2 {
+    text-anchor:middle;
+    position: relative;
+    top: 110;
+    left: 30px;
+    font: 36px 'Lucida Grande';
+    color: rgba(218, 210, 188, 1)
+}
+
+h3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font: 20px "Lucida Sans Unicode";
+    color:rgba(169, 153, 133, 1);
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+h4 {
+    position: relative;
+    top: -0;
+    left: 30px;
+    font: 20px  "Lucida Sans Regular";
+    color:rgba(112, 121, 140, 1);
+    margin-top:10%;
+    margin-bottom: 2%;
+}
+
+a {
+    color:darkseagreen
+}
+
+
+@media print {
+    .newpage { page-break-before: always; } 
+}
+
+
+
+.tooltip {
+    position: absolute;
+    opacity: 1;
+    background-color: white;
+    border: none;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#section1_answer {
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+    color:gainsboro;
+    font-size: 18px;
+    font-family: serif;   
+}
+
+#section2_checkbox {
+    position:relative;
+    margin-top: -325;
+    margin-left: 800;
+}
+
+#section2_answer {
+    margin-top: 300;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    color:gainsboro;
+    font-size: 18px;
+    font-family: serif;   
+}
+
+#section3_answer {
+    margin-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    color:rgba(112, 121, 140, 1);
+    font-size: 18px;
+    font-family: serif;   
+}
+
+#section4_answer {
+    margin-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    color:darkslategrey;
+    font-size: 18px;
+    font-family: serif;   
+}
+
+#section5_answer {
+    margin-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    color:linen;
+    font-size: 18px;
+    font-family: serif;   
+}

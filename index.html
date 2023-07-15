@@ -1,0 +1,151 @@
+<html>  
+<head>   
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"></script>
+<script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="checkbox.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Play|Roboto Mono|Rajdhani|Anton">
+</head>  
+    
+<body onload="final_project()">  
+<h1>League of Legends Game Stats </h1>
+<h2>Challenger League, Ranked Solo</h2>
+<h3>DSC 106 Project by Ruoyu Hou</h3>
+<h4><i>Game data from 3/05/2023 to 3/12/2023, retrieved from <a href="developer.riotgames.com">Riot API</a>.</i></h4>
+
+
+<div id="section0" style="background-color:white">
+</div>
+
+<div class="newpage">
+    <div id="section1" class="section">
+        <div id="section1_plot"></div>
+        <div id="section1_answer">
+            <p>
+                <b>Choice of color scheme:</b>
+                scatter dots: <i>lightsteelblue</i>, title: <i>cornflowerblue</i>; axes: <i>white</i>.
+                <br>
+                <b>Marks and channels:</b> only <i>circles</i> for the dots.
+                <br>
+                <b>Other design considerations:</b> The opacity of the scatters are set to 0.2 to be helpful to identify the density.
+            </p>
+            <p>
+                Plot 1 shows that the total gold a player earned in a game can be reflected by the number of minions 
+                killed (CS) (althought there are many other activities to earn gold). Therefore, we can have a guess on how a 
+                player would perform in a game later by observing his/her CS in the early game. Note that there are two slopes,
+                which implies that the left cluster (or line) may refer to support players.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="section2" class="section">
+    <div id="section2_plot"></div>
+    <div id="section2_checkbox">
+        <label class="container">
+            <span style="color:gainsboro">Show damage dealt to champions</span>
+            <input type="checkbox" id="totalDmgToChamps">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <div id="section2_answer">
+        <p>
+            <b>Choice of color scheme:</b>
+            bars: <i>["burlywood", "lightsteelblue"]</i>; title: <i>cornsilk</i>; axes: <i>white</i>.
+            <br>
+            <b>Marks and channels:</b> marks: <i>lines</i>; channels: <i>color hue</i> for identity channel (categorical).
+            <br>
+            <b>Other design considerations:</b> The opacity of the scatters are set to 0.2 to be helpful to identify the density. 
+            Also, there is a checkbox for toggling on/off displaying the damage dealt to champions.
+        </p>
+        <p>
+            Plot 2 shows that support players usually deal least damage but maybe often provide more utility. 
+            Damages of other positions dealt to champions are close, while junglers have a significantly higher 
+            damage to other objects (e.g. dragons, barons, turrets). From the plot, we can see that damages to
+            champions only count as a minor part of the total damage in a game. That is, team fights are only a 
+            part of the game, and we need more strategies on map resources and laning/offense/defense strategies.
+        </p>
+    </div>
+</div>
+
+
+<div id="section3" class="section">
+    <div id="section3_plot"></div>
+    <div id="section3_answer">
+        <p>
+            <b>Choice of color scheme:</b>
+            bars: <i>d3.schemeSet3</i>; title: <i>black</i>; axes: <i>grey</i>.
+            <br>
+            <b>Marks and channels:</b> marks: <i>lines</i> (bars); channels: <i>color hue</i> for identity channel 
+            (positions are categorical).
+            <br>
+            <b>Other design considerations:</b> The orientation of x-axis is set as radial and sorted by the total 
+            number of games of that champion. Since there are 162 champions, a circular plot can nicely arange all 
+            the bars and help us search or compare. 
+        </p>
+        <p>
+            Plot 3 shows us how popular each chamipon is in recent games, and may help us analyze the strength of 
+            each single champion or combos of several champions. For example, Xayah and Rakan are a typical pair of 
+            bottom partners, and they take the first and 4th position on the plot, meaning that they are a strong 
+            bottom in this patch, and maybe other players should focus on the bottom lane when their allies or enemies
+            go Xayah and Rakan.
+        </p>
+    </div>
+</div>
+
+
+<div id="section4" class="section">
+    <div id="section4_plot"></div>
+    <div id="section4_answer">
+        <p>
+            <b>Choice of color scheme:</b>
+            platforms(servers): <i>['#797d62ff', '#9b9b7aff', '#baa587ff', '#d9ae94ff', '#f1dca7ff', '#ffcb69ff', '#e8ac65ff', '#d08c60ff', '#b58463ff', '#997b66ff']</i>; 
+            title: <i>black</i>; axes: <i>cornsilk</i>; bubbles: <i>cornsilk</i> and <i>ivory</i>.
+            <br>
+            <b>Marks and channels:</b> marks: <i>circles</i> (bars); channels: <i>Area</i> of circles (magnitude).
+            <br>
+            <b>Other design considerations:</b> Games' data on some servers are not available or missing (mostly Asian area), and they are colored as grey.
+            Also, a tooltip is added so that if the viewer hovers the mouse on a circle, the tooltip will display the server's name and the exactly number of games 
+            on that server in this week. Besides, one can zoom the map to see more details about the games in that region (need more work to elaborate).
+        </p>
+        <p>
+            Plot 4 gives us a geometrical sense of how global players contribute to the LOL community, and tells us in which regions LOL as a MOBA game is more popular 
+            (though data from China is not open-source). For example, Korea does not have a large population, but a large portion of games are on the server there. This 
+            plot may help us compare some game strategies on different servers.
+        </p>
+    </div>
+</div>
+
+
+<div id="section5" class="section">
+    <div id="section5_plot"></div>
+    <div id="section5_answer">
+        <p>
+            <b>Choice of color scheme:</b>
+            champion nodes: <i>['#252323ff', '#70798cff', '#dad2bcff', '#a99985ff', '#0d1321ff', '#1d2d44ff', '#3e5c76ff', '#748cabff']</i>; 
+            title: <i>cornsilk</i>;  links: <i>lightgrey</i>.
+            <br>
+            <b>Marks and channels:</b> marks: <i>circles & lines</i> (bars); channels: <i>Area</i> of circles (to indicate number of games played by champion), 
+            and <i>line-width</i> and <i>opacity</i> for the links to show frequences of lanings between two bottom champions.
+            <br>
+            <b>Other design considerations:</b> The champion nodes are circularly ailgned to be more organized and help identify the frequence of seeing any two 
+            champions laning in the bottom lane. Also, one can drag the nodes to help compare several champions he/she is interested.
+        </p>
+        <p>
+            Plot 5 can provide some information about the most popular bottom champions as well as there laners (enemy of the same position). This can help us 
+            pick the champion either first-hand or second-hand. For example, the thicker the link between two bottom enemy champion is, the more it might indicate 
+            that they are more likely to be balanced with respect to each other.
+        </p>
+    </div>
+</div>
+
+    
+
+    
+
+</body>  
+</html>  
